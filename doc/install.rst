@@ -1,4 +1,4 @@
-Quick start guide for demo of 8x8 dot matrix LED with MAX7219
+Quick demo guide for 8x8 dot matrix LED with MAX7219
 -------------------------------------------------------------
 
 #. Connect 5 pins.
