@@ -53,7 +53,8 @@ code::
 
 
 WS2812 NeoPixels (DMA)
-""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^
+
 Typically, WS2812 NeoPixels reqire VCC, VSS (GND) and DI pins connecting to the
 Raspberry Pi, where the DI pin is usually connected to a PWM control pin such
 as GPIO 18.
