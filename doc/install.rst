@@ -26,15 +26,16 @@ MAX7219 device connection via SPI
 ============ ====== ============= ========= ====================
 Board Pin    Name   Remarks       RPi Pin   RPi Function
 ------------ ------ ------------- --------- --------------------
-1            VCC    +5V Power     5V        5.0V
+1            VCC    +5V Power     5V        *note
 2            GND    Ground        (-)       GND
 3            DIN    Data In       GPIO10    MOSI
 4            CS     Chip Select   GPIO8     SPI CE0
 5            CLK    Clock         GPIO11    SPI CLK
 ============ ====== ============= ========= ====================
 
-
-
+*: You can drive few units by 5V power supply of RPi but it's better to use extra power brick.
+ラズパイの5V電源でマトリクス3,4個をドライブすることはできますが、外部電源を使った方が安全です。
+8x8=64個のLEDに4mA/個としても256mA、4ユニット全点灯で1Aとなります。
 
 
 
