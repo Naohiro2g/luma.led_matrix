@@ -11,20 +11,6 @@ code::
   python examples/matrix_demo.py
 
 
-MAX7219 device via SPI
-""""""""""""""""""""""
-
-============ ====== ============= ========= ====================
-Board Pin    Name   Remarks       RPi Pin   RPi Function
------------- ------ ------------- --------- --------------------
-1            VCC    +5V Power     5V        5.0V
-2            GND    Ground                  GND
-3            DIN    Data In       GPIO10    MOSI
-4            CS     Chip Select   GPIO8     SPI CE0
-5            CLK    Clock         GPIO11    SPI CLK
-============ ====== ============= ========= ====================
-
-
 
 
 Installation
