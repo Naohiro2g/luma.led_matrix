@@ -16,7 +16,7 @@ from luma.core.legacy import text, show_message
 from luma.core.legacy.font import proportional, TINY_FONT
 
 # create matrix device
-device = neopixel(width=8, height=4)
+device = neopixel(width=8, height=2)
 
 
 # twisty swirly goodness
