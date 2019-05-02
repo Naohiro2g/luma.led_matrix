@@ -4,7 +4,8 @@ Quick start guide for demo 8x8 dot matrix LED with MAX7219
 #. Connect 5 pins.
 #. Run the code!
 
-code:
+code::
+
 cd luma.led_matrix
 python examples/matrix_demo.py
 
