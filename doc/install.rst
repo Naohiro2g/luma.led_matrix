@@ -38,6 +38,39 @@ Board Pin    Name   Remarks       RPi Pin   RPi Function
 8x8=64個のLEDに4mA/個としても256mA、4ユニット全点灯で1Aとなります。
 
 
+Quick demo guide for 8-dot RGB strip with WS2812 Neopixel
+-------------------------------------------------------------
+
+#. Connect 4 pins.
+#. Run the code!
+
+code::
+
+  cd luma.led_matrix
+  # for 2-unit cascade, 16 dots.
+  sudo python3 examples/neopixel_demo.py
+  sudo python3 examples/neopixel_crawl.py
+
+
+WS2812 NeoPixels (DMA)
+""""""""""""""""""""""
+Typically, WS2812 NeoPixels reqire VCC, VSS (GND) and DI pins connecting to the
+Raspberry Pi, where the DI pin is usually connected to a PWM control pin such
+as GPIO 18.
+
+============ ====== ========== =========== ==============
+Board Pin    Name   Remarks    RPi Pin     External Power
+------------ ------ ---------- ----------- --------------
+1            GND    GND        GND         -
+2            DIN    Data In    GPIO18(12)  -
+3            4-7VDC VCC        (5V/3.3V)   4-7V
+4            GND    GND        (GND)       GND
+============ ====== ========== =========== ==============
+
+
+
+
+
 
 Installation
 ------------
