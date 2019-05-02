@@ -9,6 +9,10 @@ code::
   cd luma.led_matrix
   python examples/matrix_demo.py
 
+  python examples/matrix_demo.py --help
+  python examples/matrix_demo.py --cascaded 3  --block-orientation -90
+  python examples/matrix_demo.py --cascaded 3  --block-orientation -90  --rotate 2  
+
 
 MAX7219 device connection via SPI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
