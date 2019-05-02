@@ -10,7 +10,13 @@ code::
   python examples/matrix_demo.py
 
   python examples/matrix_demo.py --help
+  
+  # for 1 unit, in at left, out at right
+  python examples/matrix_demo.py --cascaded 1 --rotate 1
+  
+  # for 3 units
   python examples/matrix_demo.py --cascaded 3  --block-orientation -90
+  # for 3 units, upside down
   python examples/matrix_demo.py --cascaded 3  --block-orientation -90  --rotate 2  
 
 
