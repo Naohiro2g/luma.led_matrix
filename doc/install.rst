@@ -23,6 +23,8 @@ code::
   python examples/matrix_demo.py --cascaded 3  --block-orientation -90
   # for 3 units, upside down
   python examples/matrix_demo.py --cascaded 3  --block-orientation -90  --rotate 2  
+  
+  基本的には、fontによるshow_message。バッファbufあるいはdataに直接書き込んでドット単位の点滅ができるか。
 
 
 MAX7219 device connection via SPI
