@@ -1,3 +1,8 @@
+5V電源だが、3.3Vでも動いた。MAX7219の仕様としては、電源電圧4.0 - 5.5V、VIH = 3.5V。
+
+ - 5V電源の場合、ラズパイのGPIO出力3.3VではVIHの3.5Vに届かないが、なんとか動いている。
+ - 3.3V電源の場合、MAX7219の動作電圧の下限を下回っているが、なんとか動いている。
+
 Quick demo guide for 8x8 dot matrix LED with MAX7219
 -------------------------------------------------------------
 
@@ -26,16 +31,16 @@ MAX7219 device connection via SPI
 ============ ====== ============= ========= ====================
 Board Pin    Name   Remarks       RPi Pin   RPi Function
 ------------ ------ ------------- --------- --------------------
-1            VCC    +5V Power     5V        *note
+1            VCC    +5V Power     3.3V(5V)  *note
 2            GND    Ground        (-)       GND
 3            DIN    Data In       GPIO10    MOSI
 4            CS     Chip Select   GPIO8     SPI CE0
 5            CLK    Clock         GPIO11    SPI CLK
 ============ ====== ============= ========= ====================
 
-*: You can drive few units by 5V power supply of RPi but it's better to use extra power brick.
-ラズパイの5V電源でマトリクス3,4個をドライブすることはできますが、外部電源を使った方が安全です。
-8x8=64個のLEDに4mA/個としても256mA、4ユニット全点灯で1Aとなります。
+*: You can drive few units by 3.3V power supply of RPi but it's better to use extra power brick.
+ラズパイの3.3V電源でマトリクス3,4個をドライブすることはできますが、外部電源を使った方が安全です。
+8x8=64個のLEDに4mA/個としても256mA、4ユニット全点灯で1Aとなります。信号レベル的には、3.3Vの方が確実。
 
 
 Quick demo guide for 8-dot RGB strip with WS2812 Neopixel
@@ -64,7 +69,7 @@ Board Pin    Name   Remarks    RPi Pin     External Power
 ------------ ------ ---------- ----------- --------------
 1            GND    GND        GND         -
 2            DIN    Data In    GPIO18(12)  -
-3            4-7VDC VCC        (5V/3.3V)   4-7V
+3            4-7VDC VCC        3.3V(5V)    3.3V
 4            GND    GND        (GND)       GND
 ============ ====== ========== =========== ==============
 
